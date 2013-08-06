@@ -43,7 +43,7 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
         </thead>
         <tfoot>
         <tr>
-            <td colspan="6">
+            <td colspan="5">
                 <?= @helper('paginator.pagination', array('total' => $total)) ?>
             </td>
         </tr>
@@ -76,7 +76,7 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
 
         <? if (!count($topics)) : ?>
             <tr>
-                <td colspan="6" align="center">
+                <td colspan="5" align="center">
                     <?= @text('No topics found'); ?>
                 </td>
             </tr>
