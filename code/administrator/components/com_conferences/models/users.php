@@ -21,8 +21,8 @@ class ComConferencesModelUsers extends ComKoowaModelDefault
         parent::_buildQueryWhere($query);
 
         if ($this->_state->search) {
-            // to change in last name and first name
-            // $query->where('tbl.title LIKE :search')->bind(array('search' =>  '%'.$this->_state->search.'%'));
+            $query->where('tbl.lastname', 'LIKE', '%' . $this->_state->search . '%')
+                ->where('tbl.firstname', 'LIKE', '%'.  $this->_state->search . '%', 'OR');
         }
     }
 }

@@ -26,8 +26,6 @@ class ComConferencesModelSubmissions extends ComKoowaModelDefault
 
     protected function _buildQueryJoins(KDatabaseQueryInterface $query)
     {
-
-
         $query->join(array('topic' => 'conferences_topics'), 'tbl.conferences_topic_id = topic.conferences_topic_id');
 
         parent::_buildQueryJoins($query);
