@@ -14,6 +14,6 @@
  * @package     Nooku_Components
  * @subpackage  Files
  */
-class ComConferencesControllerAbstract extends ComKoowaControllerDefault
+class ComConferencesControllerSubmission extends ComKoowaControllerDefault
 {
 }

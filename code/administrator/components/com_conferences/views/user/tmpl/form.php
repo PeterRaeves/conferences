@@ -37,43 +37,61 @@
             <tr>
                 <td class="key"><label><?= @text('Organization'); ?></label></td>
                 <td>
-                    <input class="" type="text" name="organization" size="32" maxlength="255" value="<?= $user->middle_initial ?>" />
+                    <input class="required" type="text" name="organization" size="32" maxlength="255" value="<?= $user->organization ?>" />
                 </td>
             </tr>
             <tr>
-                <td class="key"><label><?= @text('Regular Fee'); ?></label></td>
+                <td class="key"><label><?= @text('Street'); ?></label></td>
                 <td>
-                    <input class="required" type="text" name="price" size="32" maxlength="255" value="<?= $user->price ?>" />
+                    <input class="required" type="text" name="street" size="32" maxlength="255" value="<?= $user->street ?>" />
                 </td>
             </tr>
             <tr>
-                <td class="key"><label><?= @text('Earlybird Fee'); ?></label></td>
+                <td class="key"><label><?= @text('ZIP Code'); ?></label></td>
                 <td>
-                    <input class="required" type="text" name="price_earlybird" size="32" maxlength="255" value="<?= $user->price_earlybird ?>" />
+                    <input class="required" type="text" name="zipcode" size="32" maxlength="255" value="<?= $user->zipcode ?>" />
                 </td>
             </tr>
             <tr>
-                <td class="key"><label><?= @text('Earlybird until'); ?></label></td>
+                <td class="key"><label><?= @text('City'); ?></label></td>
                 <td>
-                    <?= @helper('behavior.calendar', array(
-                        'name' => 'earlybird_ends_on',
-                        'id' => 'earlybird_ends_on',
-                        'value' => $user->earlybird_ends_on,
-                        'format' => '%Y-%m-%d %H:%M:%S',
-                        'filter' => 'user_utc'
-                    ))?>
+                    <input class="required" type="text" name="city" size="32" maxlength="255" value="<?= $user->city ?>" />
                 </td>
             </tr>
             <tr>
-                <td class="key"><label><?= @text('Registration before'); ?></label></td>
+                <td class="key"><label><?= @text('State/Province'); ?></label></td>
                 <td>
-                    <?= @helper('behavior.calendar', array(
-                        'name' => 'registration_ends_on',
-                        'id' => 'registration_ends_on',
-                        'value' => $user->registration_ends_on,
-                        'format' => '%Y-%m-%d %H:%M:%S',
-                        'filter' => 'user_utc'
-                    ))?>
+                    <input class="" type="text" name="province" size="32" maxlength="255" value="<?= $user->province ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="key"><label><?= @text('Country'); ?></label></td>
+                <td>
+                    <input class="required" type="text" name="country" size="32" maxlength="255" value="<?= $user->country ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="key"><label><?= @text('Telephone'); ?></label></td>
+                <td>
+                    <input class="required" type="text" name="phone" size="32" maxlength="255" value="<?= $user->phone ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="key"><label><?= @text('Fax'); ?></label></td>
+                <td>
+                    <input class="" type="text" name="fax" size="32" maxlength="255" value="<?= $user->fax ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="key"><label><?= @text('E-mail'); ?></label></td>
+                <td>
+                    <input class="required" type="text" name="email" size="32" maxlength="255" value="<?= $user->email ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="key"><label><?= @text('Role'); ?></label></td>
+                <td>
+                    <input class="required" type="text" name="role" size="32" maxlength="255" value="<?= $user->role ?>" />
                 </td>
             </tr>
             <tr>

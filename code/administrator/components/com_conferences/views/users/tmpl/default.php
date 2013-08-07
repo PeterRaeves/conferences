@@ -23,14 +23,14 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
             <th>
                 <?= @helper('grid.sort', array('column' => 'firstname', 'titble' => 'First Name')); ?>
             </th>
-            <th width="10%">
+            <th width="20%">
                 <?= @helper('grid.sort', array('column' => 'lastname', 'title' => 'Last Name')); ?>
             </th>
-            <th width="10%">
-                <?= @helper('grid.sort', array('column' => 'role', 'title' => 'Role')); ?>
-            </th>
-            <th width="10%">
+            <th width="20%">
                 <?= @helper('grid.sort', array('column' => 'email', 'title' => 'E-mail')); ?>
+            </th>
+            <th width="20%">
+                <?= @helper('grid.sort', array('column' => 'role', 'title' => 'Role')); ?>
             </th>
             <th width="10%">
                 <?= @helper('grid.sort', array('column' => 'abstracts', 'title' => 'Abstracts')); ?>
@@ -79,10 +79,10 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
                     </a>
                 </td>
                 <td align="left">
-                    <?= $user->role ?>
+                    <?= $user->email ?>
                 </td>
                 <td align="left">
-                    <?= $user->email ?>
+                    <?= $user->role ?>
                 </td>
                 <td align="left">
                     <? // here will come the total of abstracts submitted by this user  ?>
