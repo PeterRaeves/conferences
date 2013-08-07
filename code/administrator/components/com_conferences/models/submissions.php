@@ -14,8 +14,25 @@
  * @package     Nooku_Components
  * @subpackage  Files
  */
-class ComConferencesModelAbstracts extends ComKoowaModelDefault
+class ComConferencesModelSubmissions extends ComKoowaModelDefault
 {
+
+    protected function _buildQueryColumns(KDatabaseQueryInterface $query)
+    {
+        parent::_buildQueryColumns($query);
+
+        $query->columns(array('topic_title' => 'topic.title'));
+    }
+
+    protected function _buildQueryJoins(KDatabaseQueryInterface $query)
+    {
+
+
+        $query->join(array('topic' => 'conferences_topics'), 'tbl.conferences_topic_id = topic.conferences_topic_id');
+
+        parent::_buildQueryJoins($query);
+    }
+
     protected function _buildQueryWhere(KDatabaseQueryInterface $query)
     {
         parent::_buildQueryWhere($query);

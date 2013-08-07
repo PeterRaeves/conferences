@@ -16,7 +16,7 @@
         <menu>Conferences</menu>
         <submenu>
             <menu view="topics" link="option=com_conferences&amp;view=topics" img="class:article">Topics</menu>
-            <menu view="abstracts" link="option=com_conferences&amp;view=abstracts" img="class:media">Abstracts</menu>
+            <menu view="submissions" link="option=com_conferences&amp;view=submissions" img="class:media">Submissions</menu>
             <menu view="users" link="option=com_conferences&amp;view=users" img="class:category">Users</menu>
             <menu view="tickets" link="option=com_conferences&amp;view=tickets" img="class:category">Tickets</menu>
         </submenu>
