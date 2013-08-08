@@ -17,6 +17,16 @@
 class ComConferencesModelSubmissions extends ComKoowaModelDefault
 {
 
+    public function __construct(KConfig $config)
+    {
+        parent::__construct($config);
+
+        $this->_state
+            ->insert('enabled', 'int')
+            ->insert('submission_status', 'cmd')
+        ;
+    }
+
     protected function _buildQueryColumns(KDatabaseQueryInterface $query)
     {
         parent::_buildQueryColumns($query);
@@ -38,5 +48,14 @@ class ComConferencesModelSubmissions extends ComKoowaModelDefault
         if ($this->_state->search) {
             $query->where('tbl.title LIKE :search')->bind(array('search' =>  '%'.$this->_state->search.'%'));
         }
+
+        if ($this->_state->submission_status) {
+            $query->where('tbl.submission_status = :submission_status')->bind(array('submission_status' =>  $this->_state->submission_status));
+        }
+
+        if ($this->_state->enabled) {
+            $query->where('tbl.enabled = :enabled')->bind(array('enabled' =>  $this->_state->enabled));
+        }
+
     }
 }

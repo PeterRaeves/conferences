@@ -14,6 +14,7 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
 <?= @helper('behavior.koowa'); ?>
 
 <form action="" method="get" class="-koowa-grid">
+    <?= @template('default-scopebar'); ?>
     <table class="adminlist"  style="clear: both;">
         <thead>
         <tr>
