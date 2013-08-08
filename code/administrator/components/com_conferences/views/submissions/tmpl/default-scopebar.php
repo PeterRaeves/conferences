@@ -19,11 +19,11 @@ defined('KOOWA') or die('Restricted access'); ?>
     </div>
     <div class="scopebar-group">
         <a class="<?= $state->enabled === 1 ? 'active' : ''; ?>"
-           href="<?= @route($state->enabled === 1 ? '&enabled=' : '&enabled=1') ?>">
+           href="<?= @route($state->enabled === 1 ? '&enabled=&submission_status=' : '&enabled=1&submission_status=') ?>">
             <?= @text('Published') ?>
         </a>
         <a class="<?= $state->enabled === 0 ? 'active' : ''; ?>"
-           href="<?= @route($state->enabled === 0 ? '&enabled=' : '&enabled=0') ?>">
+           href="<?= @route($state->enabled === 0 ? '&enabled=&submission_status=' : '&enabled=0&submission_status=') ?>">
             <?= @text('Unpublished') ?>
         </a>
     </div>
