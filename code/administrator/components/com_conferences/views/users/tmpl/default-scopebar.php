@@ -1,10 +1,9 @@
 <?php
-
 /**
  * Created by JetBrains PhpStorm.
  * User: peterraeves
- * Date: 8/08/13
- * Time: 00:22
+ * Date: 9/08/13
+ * Time: 17:34
  * To change this template use File | Settings | File Templates.
  */
 
@@ -27,7 +26,7 @@ defined('KOOWA') or die('Restricted access'); ?>
             <?= @text('Unpublished') ?>
         </a>
     </div>
-    <div class="scopebar-group">
+    <div class="scopebar-group last">
         <a class="<?= $state->submission_status === 'approved' ? 'active' : ''; ?>"
            href="<?= @route($state->status === 'approved' ? '&submission_status=' : '&submission_status=approved') ?>">
             <?= @text('Approved') ?>
@@ -41,9 +40,7 @@ defined('KOOWA') or die('Restricted access'); ?>
             <?= @text('Rejected') ?>
         </a>
     </div>
-    <!--<div class="scopebar-group last">
-            <?= @helper('listbox.access'); ?>
-        </div>-->
+
     <div class="scopebar-search">
         <?= @helper('grid.search') ?>
     </div>

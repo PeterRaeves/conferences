@@ -23,15 +23,15 @@ class ComConferencesModelSubmissions extends ComKoowaModelDefault
 
         $this->_state
             ->insert('enabled', 'int')
-            ->insert('submission_status', 'cmd')
+            ->insert('status', 'cmd')
         ;
     }
 
     protected function _buildQueryColumns(KDatabaseQueryInterface $query)
     {
-        parent::_buildQueryColumns($query);
-
         $query->columns(array('topic_title' => 'topic.title'));
+
+        parent::_buildQueryColumns($query);
     }
 
     protected function _buildQueryJoins(KDatabaseQueryInterface $query)
@@ -49,11 +49,11 @@ class ComConferencesModelSubmissions extends ComKoowaModelDefault
             $query->where('tbl.title LIKE :search')->bind(array('search' =>  '%'.$this->_state->search.'%'));
         }
 
-        if ($this->_state->submission_status) {
-            $query->where('tbl.submission_status = :submission_status')->bind(array('submission_status' =>  $this->_state->submission_status));
+        if ($this->_state->status) {
+            $query->where('tbl.status = :status')->bind(array('status' =>  $this->_state->status));
         }
 
-        if ($this->_state->enabled) {
+        if (is_numeric($this->_state->enabled)) {
             $query->where('tbl.enabled = :enabled')->bind(array('enabled' =>  $this->_state->enabled));
         }
 

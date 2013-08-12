@@ -13,8 +13,10 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
 <?= @helper('behavior.mootools'); ?>
 <?= @helper('behavior.koowa'); ?>
 
+<style src="media://com_conferences/css/conferences.css" />
+
 <form action="" method="get" class="-koowa-grid">
-    <?= @template('default-scopebar'); ?>
+    <?= @template('default_scopebar'); ?>
     <table class="adminlist"  style="clear: both;">
         <thead>
         <tr>
@@ -37,7 +39,7 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
                 <?= @helper('grid.sort', array('column' => 'average_rating', 'title' => 'Average Rating')); ?>
             </th>
             <th width="10%">
-                <?= @helper('grid.sort', array('column' => 'submission_status', 'title' => 'Status')); ?>
+                <?= @helper('grid.sort', array('column' => 'status', 'title' => 'Status')); ?>
             </th>
             <th width="10%">
                 <?= @helper('grid.sort', array('column' => 'created_on', 'title' => 'Created on')); ?>
@@ -54,16 +56,7 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
         </tr>
         <tr>
             <td><?= @helper('grid.checkall'); ?></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td colspan="10"></td>
         </tr>
         </thead>
         <tfoot>
@@ -90,7 +83,7 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
                     <?= $submission->created_by ?>
                 </td>
                 <td align="left">
-                    <?= $submission->conferences_topic_id ?>
+                    <?= $submission->topic_title ?>
                 </td>
                 <td align="left">
                     <?= $submission->presentation_type ?>
@@ -99,7 +92,7 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
                     <?= $submission->average_rating ?>
                 </td>
                 <td align="left">
-                    <?= $submission->submission_status ?>
+                    <?= $submission->status ?>
                 </td>
                 <td align="left">
                     <?= $submission->created_on ?>

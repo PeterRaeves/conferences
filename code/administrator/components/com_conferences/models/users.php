@@ -16,6 +16,22 @@
  */
 class ComConferencesModelUsers extends ComKoowaModelDefault
 {
+    protected function _buildQueryColumns(KDatabaseQueryInterface $query)
+    {
+        $query->columns(array('user_name' => 'user.name'))
+                ->columns(array('user_email' => 'user.email'))
+            ->columns(array('fullname' => "CONCAT(tbl.lastname, ', ', tbl.firstname)"));
+
+        parent::_buildQueryColumns($query);
+    }
+
+    protected function _buildQueryJoins(KDatabaseQueryInterface $query)
+    {
+        $query->join(array('user' => 'users'), 'tbl.users_user_id = user.id');
+
+        parent::_buildQueryJoins($query);
+    }
+
     protected function _buildQueryWhere(KDatabaseQueryInterface $query)
     {
         parent::_buildQueryWhere($query);
@@ -25,4 +41,6 @@ class ComConferencesModelUsers extends ComKoowaModelDefault
                 ->where('tbl.firstname', 'LIKE', '%'.  $this->_state->search . '%', 'OR');
         }
     }
+
+
 }

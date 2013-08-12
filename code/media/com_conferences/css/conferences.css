@@ -1,0 +1,120 @@
+.scopebar {
+    height: 18px;
+    padding: 3px 10px 3px;
+    background-color: #eeeeee;
+    background-image: linear-gradient(tobotttom,#f2f2f2,#e9e9e9);
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.scopebar .scopebar-group {
+    display: block;
+    float: left;
+    border-right: 1px solid #BBB;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 10px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.scopebar .scopebar-group.last {
+    border-right: 0 none;
+    margin-right: 0;
+}
+
+.scopebar .scopebar-group a.active, .scopebar .scopebar-group a:hover:active {
+    -webkit-box-shadow: inset hsla(0, 0%, 20%, 0.8) 0px 1px 2px, white 0 1px 0;
+    -moz-box-shadow: inset hsla(0, 0%, 20%, 0.8) 0px 1px 2px, white 0 1px 0;
+    box-shadow: inset hsla(0, 0%, 20%, 0.8) 0px 1px 2px, white 0 1px 0;
+}
+
+.scopebar .scopebar-group a:hover, .scopebar .scopebar-group a.active {
+    text-decoration: none;
+    background: #A0A0A0;
+    color: #FFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-shadow: rgba(0, 0, 0, 0.35) 0 1px 0;
+}
+
+.scopebar .scopebar-search {
+    margin-left: 25px;
+    text-align: right;
+    position: relative;
+}
+
+.scopebar .scopebar-search label {
+    position: absolute;
+    right: 213px;
+    top: 2px;
+    opacity: 0.75;
+}
+
+.scopebar .scopebar-search input {
+    max-width: 250px;
+    padding: 1px;
+    padding-left: 17px;
+    font-size: 11px;
+    height: 15px;
+}
+
+.scopebar .scopebar-search button {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+label, input, button, select, textarea {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+/* Header */
+.upper_head {
+    padding: 5px 30px 30px;
+}
+.upper_head a  {
+    display: block;
+    background: #f2f2f2;
+    border: #ccc 1px solid;
+    box-shadow: rgba(0,0,0,0.1) 0px 0px 10px inset, rgba(0,0,0,0.1) 0 0 2px;
+    padding: 1px 5px;
+    border-radius: 4px;
+    margin: 0px 10px;
+    text-shadow: #fff 0px 1px 0px;
+    font-size: 11px;
+}
+.form.sub_list.field_detail{padding:20px;}
+input[type="submit"], input[type="button"], .register_button a {
+    display: inline-block;
+    box-shadow: rgba(0,0,0,0.1) 0px 0px 10px inset, rgba(0,0,0,0.1) 0 0 1px;
+    padding: 11px 22px 9px;
+    line-height:19px;
+    border-radius: 4px;
+    margin: 5px 10px;
+    color:#fff;
+    font-weight:bold;
+    font-size: 12px;
+}
+.upper_head a:hover {
+    box-shadow: rgba(0,0,0,0.1) 0px 0px 3px;
+}
+
+.shorcuts {
+    float: right;
+    padding: 3px;
+}
+

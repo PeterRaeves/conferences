@@ -25,7 +25,7 @@ class ComConferencesTemplateHelperListbox extends ComKoowaTemplateHelperListbox
             'model'		=> 'users',
             'name' 		=> 'conferences_user_id',
             'value'		=> 'id',
-            'text'		=> 'lastname',
+            'text'		=> 'fullname',
             'prompt'	=> '- Select User -',
             'attribs'    => array('id' => $config->name)
         ));
@@ -75,14 +75,15 @@ class ComConferencesTemplateHelperListbox extends ComKoowaTemplateHelperListbox
         return $list;
     }
 
-    public function submission_status($config = array())
+    public function status($config = array())
     {
         $config = new KConfig($config);
         $config->append(array(
-            'name'		=> 'submission_status',
+            'name'		=> 'status',
             'attribs'	=> array()
         ));
 
+        $options[] 	= $this->option(array('text' => '- Select Status -', 'value' => ''));
         $options[] 	= $this->option(array('text' => 'Pending', 'value' => 'pending'));
         $options[] 	= $this->option(array('text' => 'Approved', 'value' => 'approved'));
         $options[] 	= $this->option(array('text' => 'Rejected', 'value' => 'rejected'));

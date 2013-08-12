@@ -25,8 +25,8 @@
                 <td class="key"><label><?= @text('Abstract'); ?></label></td>
                 <td>
                     <?= @editor(array(
-                        'name' => 'submission_text',
-                        'id'   => 'submission_text',
+                        'name' => 'description',
+                        'id'   => 'description',
                         'width' => '100%',
                         'height' => '341',
                         'cols' => '100',
@@ -61,13 +61,13 @@
             <tr>
                 <td class="key"><label><?= @text('Authors'); ?></label></td>
                 <td>
-                    <?= "Here comes a list of authors" ?>
+                    <?= @template('form_authors') ?>
                 </td>
             </tr>
             <tr>
                 <td class="key"><label><?= @text('Status'); ?></label></td>
                 <td>
-                    <?=@helper('com://admin/conferences.template.helper.listbox.submission_status', array('selected' => $submission->submission_status)); ?>
+                    <?=@helper('com://admin/conferences.template.helper.listbox.status', array('selected' => $submission->status)); ?>
                 </td>
             </tr>
 

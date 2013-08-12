@@ -85,7 +85,7 @@
             <tr>
                 <td class="key"><label><?= @text('E-mail'); ?></label></td>
                 <td>
-                    <input class="required" type="text" name="email" size="32" maxlength="255" value="<?= $user->email ?>" />
+                    <input class="required" type="text" name="email" size="32" maxlength="255" value="<?= $user->user_email ?>" />
                 </td>
             </tr>
             <tr>

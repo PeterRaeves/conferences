@@ -79,7 +79,7 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
                     </a>
                 </td>
                 <td align="left">
-                    <?= $user->email ?>
+                    <?= $user->user_email ?>
                 </td>
                 <td align="left">
                     <?= $user->role ?>
