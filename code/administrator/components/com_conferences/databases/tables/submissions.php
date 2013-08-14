@@ -18,7 +18,7 @@ class ComConferencesDatabaseTableSubmissions extends KDatabaseTableDefault
                 'modifiable'
             ),
             'filters' => array(
-                'description' => array('html'),
+                'content' => array('html'),
                 'authors' => array('json')
             )
         ));

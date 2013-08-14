@@ -37,8 +37,8 @@
                 <td>
                     <p>Put some clear directives here...</p>
                     <?= @editor(array(
-                        'name' => 'description',
-                        'id'   => 'description',
+                        'name' => 'content',
+                        'id'   => 'content',
                         'width' => '100%',
                         'height' => '341',
                         'cols' => '100',
