@@ -8,7 +8,7 @@
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.nooku.org
  */
-defined('KOOWA') or die( 'Restricted access' ); ?>
+defined('KOOWA') or die( 'Restricted access' );?>
 
 <?= @helper('behavior.mootools'); ?>
 <?= @helper('behavior.koowa'); ?>
@@ -52,7 +52,7 @@ defined('KOOWA') or die( 'Restricted access' ); ?>
     <? foreach ($submissions as $submission) : ?>
         <tr>
             <td align="left">
-                <a href="<?= @route('view=submission&layout=form&id=' . $submission->id); ?>">
+                <a href="<?= @route('view=submitter&layout=form&id=' . $submission->id); ?>">
                     <?= $submission->title ?>
                 </a>
             </td>

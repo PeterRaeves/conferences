@@ -19,7 +19,7 @@ class ComConferencesModelUsers extends ComKoowaModelDefault
     protected function _buildQueryColumns(KDatabaseQueryInterface $query)
     {
         $query->columns(array('user_name' => 'user.name'))
-                ->columns(array('user_email' => 'user.email'))
+            ->columns(array('user_email' => 'user.email'))
             ->columns(array('fullname' => "CONCAT(tbl.lastname, ', ', tbl.firstname)"));
 
         parent::_buildQueryColumns($query);

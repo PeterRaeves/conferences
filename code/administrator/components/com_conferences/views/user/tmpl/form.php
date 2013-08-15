@@ -35,6 +35,12 @@
                 </td>
             </tr>
             <tr>
+                <td class="key"><label><?= @text('Gender'); ?></label></td>
+                <td>
+                    <?=@helper('com://admin/conferences.template.helper.listbox.gender', array('selected' => $user->gender)); ?>
+                </td>
+            </tr>
+            <tr>
                 <td class="key"><label><?= @text('Organization'); ?></label></td>
                 <td>
                     <input class="required" type="text" name="organization" size="32" maxlength="255" value="<?= $user->organization ?>" />
@@ -91,7 +97,7 @@
             <tr>
                 <td class="key"><label><?= @text('Role'); ?></label></td>
                 <td>
-                    <input class="required" type="text" name="role" size="32" maxlength="255" value="<?= $user->role ?>" />
+                    <?=@helper('com://admin/conferences.template.helper.listbox.role', array('selected' => $user->role)); ?>
                 </td>
             </tr>
             <tr>

@@ -33,7 +33,7 @@ class ComConferencesTemplateHelperListbox extends ComKoowaTemplateHelperListbox
         return parent::_listbox($config);
     }
 
-    public function roles($config = array())
+    public function role($config = array())
     {
         $config = new KConfig($config);
         $config->append(array(
@@ -64,6 +64,27 @@ class ComConferencesTemplateHelperListbox extends ComKoowaTemplateHelperListbox
 
         $options[] 	= $this->option(array('text' => 'Oral', 'value' => 'oral'));
         $options[] 	= $this->option(array('text' => 'Poster', 'value' => 'poster'));
+
+        $list = $this->optionlist(array(
+            'options'   => $options,
+            'name'      => $config->name,
+            'selected'  => $config->selected,
+            'attribs'   => $config->attribs
+        ));
+
+        return $list;
+    }
+
+    public function gender($config = array())
+    {
+        $config = new KConfig($config);
+        $config->append(array(
+            'name'		=> 'gender',
+            'attribs'	=> array()
+        ));
+
+        $options[] 	= $this->option(array('text' => 'Male', 'value' => 'male'));
+        $options[] 	= $this->option(array('text' => 'Female', 'value' => 'female'));
 
         $list = $this->optionlist(array(
             'options'   => $options,

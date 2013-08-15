@@ -6,6 +6,8 @@
 <?= @helper('behavior.keepalive'); ?>
 <?= @helper('behavior.validator'); ?>
 
+<style src="media://com_conferences/css/conferences.css" />
+
 <?= @template('submission_toolbar'); ?>
 
 <h3><?= @text('Submit an Abstract') ?></h3>
